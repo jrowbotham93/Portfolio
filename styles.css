@@ -1,10 +1,17 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+ }
+
 .grid-container {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100px repeat(2, 700px) 300px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px repeat(3, 700px) 300px;
     grid-template-areas: 
       "header header"
-      "main about"
+      "main image"
+      "about about"
       "resume timeline"
       "footer footer";
   }
@@ -16,7 +23,17 @@
   .main-container {
     grid-area: main;
     background-color: #c664ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
+
+  .image-container {
+    grid-area: image;
+    background-color: #8ca0ff;
+  }
+
   .about-container {
     grid-area: about;
     background-color: #64dbff;
@@ -33,4 +50,69 @@
     grid-area: footer;
     background-color: #8ca0ff;
   }
+  
+  .nav-bar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    background-color: #b8f0c1;
+    padding-top: 10px;
+  }
+
+  .nav-bar li{
+    display: inline;
+    font-family: 'Noto Serif SC', serif;
+    list-style-type: none;
+    margin-right: 30px;
+
+  }
+
+  .nav-bar li:hover{
+    opacity: 0.3;
+    transition: all 0.5s ease;
+  }
+
+  .heading h1{
+    font-family: 'Bungee', cursive;
+    font-size: 7pc;
+
+  }
+
+  .heading p{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
+    font-size: 1pc;
+  }
+
+  .animation{
+    animation: [moving-clouds] [animation-duration] [animation-timing-function]
+    [animation-delay] [animation-iteration-count] [animation-direction];
+    animation: bounceIn 2s ease-in-out 3s 3 alternate;
+  }
+
+
+
+
+
+
+
+  .summary-text{
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    overflow: hidden;
+
+  }
+
+
+
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif SC', serif;
+font-family: 'Bungee', cursive;
+font-family: 'Exo 2', sans-serif; */
+
   
