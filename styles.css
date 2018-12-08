@@ -1,0 +1,36 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px repeat(2, 700px) 300px;
+    grid-template-areas: 
+      "header header"
+      "main about"
+      "resume timeline"
+      "footer footer";
+  }
+  
+  .header-container {
+    grid-area: header;
+    background-color: #8cffa0;
+  }
+  .main-container {
+    grid-area: main;
+    background-color: #c664ff;
+  }
+  .about-container {
+    grid-area: about;
+    background-color: #64dbff;
+  }
+  .resume-container {
+    grid-area: resume;
+    background-color: #ffff64;
+  }
+  .timeline-container {
+    grid-area: timeline;
+    background-color: #ffa08c;
+  }
+  .footer-container{
+    grid-area: footer;
+    background-color: #8ca0ff;
+  }
+  
