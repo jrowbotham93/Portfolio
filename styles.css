@@ -7,7 +7,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px repeat(3, 700px) 300px;
+    grid-template-rows: 50px repeat(3, 700px) 300px;
     grid-template-areas: 
       "header header"
       "main image"
@@ -63,7 +63,7 @@
 
   .nav-bar li{
     display: inline;
-    font-family: 'Noto Serif SC', serif;
+    font-family: 'Exo 2', sans-serif;
     list-style-type: none;
     margin-right: 30px;
 
@@ -85,18 +85,6 @@
     font-weight: 100;
     font-size: 1pc;
   }
-
-  .animation{
-    animation: [moving-clouds] [animation-duration] [animation-timing-function]
-    [animation-delay] [animation-iteration-count] [animation-direction];
-    animation: bounceIn 2s ease-in-out 3s 3 alternate;
-  }
-
-
-
-
-
-
 
   .summary-text{
     display: flex;
