@@ -224,7 +224,13 @@
   .contact-form button{
     width: 20%;
     height: 10%;
-    margin-top: 10px;
+    margin-top: 10px;}
+
+    git init
+git add .
+git commit -m "my commit"
+git remote set-url origin git@github.com:username/repo.git
+git push origin master
 
 
 
