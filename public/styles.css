@@ -226,11 +226,7 @@
     height: 10%;
     margin-top: 10px;}
 
-    git init
-git add .
-git commit -m "my commit"
-git remote set-url git@github.com:jrowbotham93/Portfolio.git
-git push origin master
+
 
 
 
