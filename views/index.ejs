@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio | James Rowbotham</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Exo+2|Montserrat|Noto+Serif+SC" rel="stylesheet">
+</head>
+
+<body>
+    <section class="grid-container">
+        <div class="header-container">
+          <nav class="nav-bar">
+                <ul>
+                    <li>About</li>
+                    <li>Resume</li>
+                    <li>Portfolio</li>
+                </ul>
+            </nav>
+        </div>
+       
+        <div class="main-container">
+            <div class="heading">
+                <h1>Welcome</h1>
+
+
+                <p>Writer & Web-Developer</p>
+            </div>
+        </div>
+        <div class="image-container">
+        </div>
+        <div class="about-container">
+                
+            <div class="content-box">
+                    <span class="about-heading">
+                        <h2>Web-Dev</h2>
+                    </span>
+                        <p class="about-text">Attracted by the applicability of web development, in 2018 I started to learn how to code. After graduating from the BSSA in Amsterdam - a 3-month full-stack web-dev course - I dived straight in the deep end with an Amsterdam-based software company, Finaps. Here, i've learned the ropes, developing mostly in JavaScript, Node.JS, CSS and HTML5</p>
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-codepen"></i>
+                        <i class="fab fa-react"></i>
+                    </div>
+                <div class="content-box">
+                    <span class="about-heading">
+                        <h2>Writer</h2>
+                    </span>
+                        <p class="about-text">I keep a steady flow of freelance writing projects on the side. I've written sustainability reports for global companies, whitepapers for up and coming start-ups and informative articles for businesses, agencies and NGO's. Check out my portfolio below. You can hire me directly through the contact form below, or through UpWork.</p> 
+                    </div>
+                </div>
+        <div class="contact-container">
+            <form class="contact-form" name="data" method="post" action="/" >
+                <input placeholder="Name" name="name">
+                <input placeholder="Company"name="company">
+                <input placeholder="Email"name="email">
+                <input placeholder="Phone Number"name="number" type="number">
+                <input placeholder="What are you after?">
+                <button type="submit">submit</button>
+            </form>
+        </div>
+
+        <div class="timeline-container"></div>
+        <div class="resume-container"></div>
+        <div class="footer-container"></div>
+    </section>
+    <script>
+
+    let isScrolling = false; 
+
+    window.addEventListener("scroll", throttleScroll, false);
+ 
+            function throttleScroll(e) {
+               if(isScrolling == false){
+                   window.requestAnimationFrame(function(){
+                       scrolling(e);
+                       isScrolling = false;
+                   });
+                   }
+                   isScrolling = true;
+               }  
+    
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+            
+        var aboutSection = document.getElementsByClassName("about-container");
+        var mainSection = document.getElementsByClassName("main-container");
+        // var secondBox = document.querySelector("#secondBox");
+
+    function scrolling(e){
+
+        if (isPartiallyVisible(aboutSection)) {
+        aboutSection.classList.add("active");
+ 
+        document.aboutSection.classList.add("colorChange");
+        document.aboutSection.classList.remove("about-container");
+      } else {
+        document.aboutSection.classList.add("colorChange");
+        document.aboutSection.classList.remove("about-container");
+      }
+ 
+      if (isFullyVisible(aboutSection)) {
+        aboutSection.classList.add(".about-container:active ");
+ 
+        document.aboutSection.classList.add("about-container");
+        document.aboutSection.classList.remove("colorChange");
+      }
+
+      for (var i = 0; i < aboutSection.length; i++) {
+        var aboutSect = aboutSection[i];
+ 
+        if (isPartiallyVisible(aboutSect)) {
+          aboutSect.classList.add("colorChange");
+        } else {
+          aboutSect.classList.remove("about-container");
+        }
+      }
+    }
+ 
+    function isPartiallyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+      var height = elementBoundary.height;
+ 
+      return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
+ 
+    function isFullyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+ 
+      return ((top >= 0) && (bottom <= window.innerHeight));
+    }
+
+            
+    
+    </script>
+</body>
+
+</html>

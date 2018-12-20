@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A place for my work, previous experience, resume.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jrowbotham93/Portfolio.git"
+  },
+  "author": "James Rowbotham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrowbotham93/Portfolio/issues"
+  },
+  "homepage": "https://github.com/jrowbotham93/Portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
