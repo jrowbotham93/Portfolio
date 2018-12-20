@@ -226,7 +226,11 @@
     height: 10%;
     margin-top: 10px;}
 
-
+    git init
+    git add .
+    git commit -m "server added"
+    git remote add origin git@github.com:jrowbotham93/Portfolio.git
+    git push origin master
 
 
 
