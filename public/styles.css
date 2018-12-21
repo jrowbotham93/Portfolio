@@ -75,6 +75,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
   }
   .resume-container {
     grid-area: resume;
@@ -96,7 +97,6 @@
     height: 100%;
     width: 100%;
     padding-top: 10px;
-    
   }
 
   .nav-bar li{
@@ -106,7 +106,6 @@
     margin-right: 30px;
     font-size: 1.2em;
     border-bottom-color: black;
-
   }
 
   .nav-bar li:hover{
@@ -163,7 +162,7 @@
     margin-left: 25%;
 
   }
-
+/* JAVASCIPT HOOK */
   .colorChange {
     background: linear-gradient(to right, rgba(198,100,255,1) 0%, rgba(169,130,255,1) 50%, rgba(140,160,255,1) 100%);
     grid-area: about;
@@ -200,6 +199,46 @@
     background-size: 100% 88%;
   }
 
+  .contact-heading{
+    display: flex;
+    justify-content: center;
+    font-family: 'Bungee', cursive;
+    font-size: 3pc;
+    background-image: linear-gradient(120deg, rgba(169,130,255,1),  rgba(140,160,255,1) 100%); 
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.35s ease-in;
+    z-index: 1;
+  }
+  .contact-heading:hover {
+    background-size: 100% 75%;
+    
+  }
+
+  .contact-form-animation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .fas{
+    position: relative;
+    left: -55%;
+    font-size: 3em;
+    color: rgba(198,100,255,1);
+    animation: rocket 20s infinite;
+    opacity: 0.5;
+  }
+
+  @keyframes rocket{
+    0% {transform: translateX(0px)
+    }
+    100%{transform: translateX(2000px)
+    }
+  }
+
   .contact-form{
     width: 100%;
     height: 50%;
@@ -208,34 +247,49 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
+    outline: none;
+    z-index: 1;
+    opacity: 0.8;
   }
   .contact-form input{
     text-align: center;
-    height: 50%;
-    width: 50%;
-    opacity:1;
-    background: no-repeat;
+    height: 30%;
+    width: 30%;
+    background-color: transparent;
     border: none;
-    color: black;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'Exo 2', sans-serif;
+    outline: none;
 
   }
+  .contact-form input:focus{
+    border-bottom: 4px solid rgba(198,100,255,1);
+  } 
+  .contact-form input:hover{  
+    opacity: 0.6;
+  }
   .contact-form button{
-    width: 20%;
+    width: 10%;
     height: 10%;
-    margin-top: 10px;}
-
-    git init
-    git add .
-    git commit -m "server added"
-    git remote add origin git@github.com:jrowbotham93/Portfolio.git
-    git push origin master
-
-
-
-
+    margin-top: 10px;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Exo 2', sans-serif;
+    background-color: transparent;
+    outline: none;
+  }
+  .contact-form button:hover{  
+    opacity: 0.4;
+    cursor: pointer;
+    color: rgb(241, 23, 223);
+  }
   
+
+ 
+   
+
+    
 
 
 
